@@ -37,6 +37,9 @@ for _ in range(1000):
     # step (transition) through the environment with the action
     # receiving the next observation, reward and if the episode has terminated or truncated
     observation, reward, terminated, truncated, info = env.step(action)
+    
+    # Update the on-screen display
+    env.render()
 
     # If the episode has ended then we can reset to start a new episode
     if terminated or truncated:

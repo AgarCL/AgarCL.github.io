@@ -275,6 +275,9 @@
     <span class="c1"># step (transition) through the environment with the action</span>
     <span class="c1"># receiving the next observation, reward and if the episode has terminated or truncated</span>
     <span class="n">observation</span><span class="p">,</span> <span class="n">reward</span><span class="p">,</span> <span class="n">terminated</span><span class="p">,</span> <span class="n">truncated</span><span class="p">,</span> <span class="n">info</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">step</span><span class="p">(</span><span class="n">action</span><span class="p">)</span>
+    
+    <span class="c1"># Update the on-screen display</span>
+    <span class="n">env</span><span class="o">.</span><span class="n">render</span><span class="p">()</span>
 
     <span class="c1"># If the episode has ended then we can reset to start a new episode</span>
     <span class="k">if</span> <span class="n">terminated</span> <span class="ow">or</span> <span class="n">truncated</span><span class="p">:</span>
