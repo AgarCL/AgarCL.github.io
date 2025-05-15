@@ -45,20 +45,20 @@ import gymnasium as gym
 import gym_agario
 
 config = {
-    'num_frames': 1,      # Number of frames per step
-    'arena_size': 500,    # Size of the arena
-    'num_pellets': 500,   # Number of pellets
-    'pellet_regen': True, # Pellet regeneration
-    'num_viruses': 25,    # Number of viruses
-    'num_bots': 25,       # Number of bots
-    'grid_size': 256,     # Size of the grid
-    'obs_type': "grid",   # Observation type
-    'num_agents':  1,     # Number of agents (fixed at 1)
-    'c_death': -100,      # Death penalty
+    'arena_size':     500,      # Size of the arena
+    'num_pellets':    500,      # Number of pellets
+    'pellet_regen':   True,     # Pellet regeneration
+    'num_viruses':    25,       # Number of viruses
+    'num_bots':       25,       # Number of bots
+    'grid_size':      256,      # Size of the grid
+    'obs_type':       "grid",   # Observation type
+    'num_agents':     1,        # Number of agents (fixed at 1)
+    'c_death':        -100,     # Death penalty
+    'render_mode':    "human",  # Live rendering 
   }
 
 
-env = gym.make("agario-grid-v0", render_mode="human", **config)
+env = gym.make("agario-grid-v0", **config)
 env.reset()
 env.seed(0)
 

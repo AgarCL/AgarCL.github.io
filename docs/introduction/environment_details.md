@@ -84,27 +84,30 @@ This function will return an `Env()` for users to interact with. Furthermore, `m
 
 ```python
 default_config = {
-    'ticks_per_step':  1,            # Number of physics ticks simulated for each env.step()
-    'num_frames':      1,            # Number of frames stacked per observation (fixed at 1)
-    'arena_size':      350,          # Width and height of the square arena in game units
-    'num_pellets':     500,          # Initial number of static food pellets
-    'num_viruses':     0,            # Number of virus entities in the arena
-    'num_bots':        0,            # Number of bot-controlled cells
-    'pellet_regen':    True,         # Whether pellets respawn until num_pellets is reached
-    'grid_size':       128,          # Resolution (width/height) of grid observations
-    'screen_len':      128,          # Resolution (width/height) of rendered screen observations
-    'observe_cells':   False,        # Include own cell positions in the observation
-    'observe_others':  False,        # Include other players’ cell positions
-    'observe_viruses': False,        # Include virus positions
-    'observe_pellets': False,        # Include pellet positions
-    'obs_type':        "screen",     # Observation mode: "screen" for pixel-based or "grid" for grid-like
-    'reward_type':     diff(),       # Reward function: diff() for change in mass ("diff = reward=mass(t)-mass(t-1)"); alternative: mass() ("mass:reward=mass")
-    'render_mode':     "rgb_array",  # Rendering: "human" for live window, "rgb_array" for frame buffers
-    'num_agents':      1,            # Number of agents to control (fixed at 1)
-    'c_death':         0,            # Death penalty: subtract this value when agent is eaten
-    'agent_view':      True,         # Restrict observation to local agent’s field of view
-    'add_noise':       True,         # Add random noise to observations for robustness
-    'number_steps':    500,          # Maximum number of steps per episode or rollout
-    'env_type':        0,            # 0 = episodic, 1 = continuing
+    'ticks_per_step':      4,            # Number of physics ticks simulated for each env.step()
+    'arena_size':          550,          # Width and height of the square arena in game units
+    'num_pellets':         350,          # Initial number of static food pellets
+    'num_viruses':         10,            # Number of virus entities in the arena
+    'num_bots':            8,            # Number of bot-controlled cells
+    'pellet_regen':        True,         # Whether pellets respawn until num_pellets is reached
+    'grid_size':           128,          # Resolution (width/height) of grid observations
+    'screen_len':          128,          # Resolution (width/height) of rendered screen observations
+    'observe_cells':       False,        # Include own cell positions in the observation
+    'observe_others':      False,        # Include other players’ cell positions
+    'observe_viruses':     False,        # Include virus positions
+    'observe_pellets':     False,        # Include pellet positions
+    'obs_type':            "screen",     # Observation mode: "screen" for pixel-based or "grid" for grid-like or "gobigger"
+    'reward_type':         diff(),       # Reward function: diff() for change in mass ("diff = reward=mass(t)-mass(t-1)"); alternative: mass() ("mass:reward=mass")
+    'render_mode':         "rgb_array",  # Rendering: "human" for live window, "rgb_array" for frame buffers
+    'num_agents':          1,            # Number of agents to control (fixed at 1)
+    'c_death':             0,            # Death penalty: subtract this value when agent is eaten
+    'agent_view':          True,         # Restrict observation to local agent’s field of view
+    'add_noise':           True,         # Add random noise to observations for robustness
+    'number_steps':        500,          # Maximum number of steps per episode or rollout
+    'env_type':            0,            # 0 = episodic, 1 = continuing
+    'mode':                0,            # 0 - main game
+    'load_env_snapshot':   0,            # Do you want to load a snapshot of the environment?
+    'record_video':        True,         # Do you want to record a video of the environment?
+    'save_env_snapshot':   True,         # Do you want to save a snapshot of the environment?
 }
 ```
