@@ -87,7 +87,7 @@ default_config = {
     'ticks_per_step':      4,            # Number of physics ticks simulated for each env.step()
     'arena_size':          550,          # Width and height of the square arena in game units
     'num_pellets':         350,          # Initial number of static food pellets
-    'num_viruses':         10,            # Number of virus entities in the arena
+    'num_viruses':         10,           # Number of virus entities in the arena
     'num_bots':            8,            # Number of bot-controlled cells
     'pellet_regen':        True,         # Whether pellets respawn until num_pellets is reached
     'grid_size':           128,          # Resolution (width/height) of grid observations
