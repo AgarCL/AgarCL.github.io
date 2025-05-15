@@ -7,11 +7,14 @@ title: Installation Instructions
 
 The recommended way to use AgarCL is within a Docker container running a Linux OS. This ensures there are no conflicts with other installed packages or platforms. This installation script will allow you to interact with AgarCL in a headless mode.
 
+
+
 ## Setting up the container
 Follow these steps to set up the container:
 
 1. **Download the Dockerfile**
    - Download the [Dockerfile.txt](https://github.com/AgarCL/AgarCL/blob/main/Dockerfile.txt).
+   - You can jump to step 4 for instructions to use a pre-built [image](https://hub.docker.com/repository/docker/agarcl/agarclimage/general) that we share.
 
 2. **Navigate to the Directory Containing the Dockerfile**
    - Open your terminal and navigate to the folder where the `Dockerfile.txt` is located:
