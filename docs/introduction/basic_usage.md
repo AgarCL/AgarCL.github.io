@@ -54,7 +54,6 @@ config = {
     'obs_type':       "grid",   # Observation type
     'num_agents':     1,        # Number of agents (fixed at 1)
     'c_death':        -100,     # Death penalty
-    'render_mode':    "human",  # Live rendering 
   }
 
 
