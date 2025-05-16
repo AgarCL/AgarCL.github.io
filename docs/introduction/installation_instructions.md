@@ -3,17 +3,15 @@ layout: "contents"
 title: Installation Instructions
 ---
 
-# Installation Instructions
+# Installation instructions
 
 The recommended way to use AgarCL is within a Docker container running a Linux OS. This ensures there are no conflicts with other installed packages or platforms. This installation script will allow you to interact with AgarCL in a headless mode.
-
-
 
 ## Setting up the container
 Follow these steps to set up the container:
 
 1. **Download the Dockerfile**
-   - Download the [Dockerfile.txt](https://github.com/AgarCL/AgarCL/blob/main/Dockerfile.txt).
+   - Download the [Dockerfile.txt](https://github.com/AgarCL/AgarCL/blob/master/Dockerfile.txt).
    - You can jump to step 4 for instructions to use a pre-built [image](https://hub.docker.com/repository/docker/agarcl/agarclimage/general) that we share.
 
 2. **Navigate to the Directory Containing the Dockerfile**
@@ -27,15 +25,19 @@ Follow these steps to set up the container:
      ```bash
      docker build -f Dockerfile.txt -t agarclimage .
      ```
-
-4. **Run the Docker Container**
+   - Skip to step 5, now that your image is built.
+4. **Directly use the pre-built image**
+   - ```bash
+     docker pull agarcl/agarclimage
+     ```
+5. **Run the Docker Container**
    - Once the image has been built, run the container:
      ```bash
      docker run --gpus all -it --name agarclcontainer agarclimage
      ```
    - This command will start the container with the name `agarclcontainer`. The `--gpus all` flag tells Docker to use all available GPUs on your host system for the container.
 
-## Installing just the AgarCL Platform
+## Installing the AgarCL Platform
 
 Now, let's install the platform on your system (`agarclcontainer` container):
 
@@ -60,17 +62,15 @@ Now, let's install the platform on your system (`agarclcontainer` container):
 
 ### Done!
 
-You have successfully set up the AgarCL platform in a Docker container and installed the necessary dependencies. You can now start using the platform!
-
 ## Installing the AgarCL Platform and benchmarking tools
 
 1. **Clone the AgarCL-benchmark Repository**
    - Clone the repository:
      ```bash
-     git clone git@github.com:AgarCL/AgarCL-benchmark.git
+     git clone git@github.com/AgarCL/AgarCL-benchmark.git
      ```
 
-2. **Navigate to the AgarCL-Benchmark Directory**
+2. **Navigate to the AgarLE-Benchmark Directory**
    - Change into the `AgarCL-benchmark` directory:
      ```bash
      cd AgarCL-benchmark
@@ -91,14 +91,29 @@ You have successfully set up the AgarCL platform in a Docker container and insta
 6. **Install the Platform**
    - Run the installation command to set up the platform:
      ```bash
-     python3 setup.py install --user
+     python setup.py install --user
      ```
 
 ### Done!
 
-## macOS Installation Guide
+## macOS and Linux Installation Guide
 
-Follow the instructions [here](https://brew.sh/) and make sure you have homebrew correctly installed and updated.
+### Installation notes:
+
+- Ensure the project is compiled with clang++, not g++
+
+- A graphical user interface (GUI) is required to run self-play mode or enable real-time rendering. However, a GUI is not necessary for training agents or recording and saving videos of the environment’s execution.
+
+### macOS Installation Guide
+
+> 💡 Before starting:
+>
+> Follow the instructions [here](https://brew.sh/) and make sure you have **homebrew** correctly installed and updated.
+>
+> Make sure **Command Line Tools** are installed properly, follow the [documentation](https://developer.apple.com/xcode/resources/).
+>
+> Note: The installer will automatically install **CMake 3.22** (a compatible version for this project)
+
 
 Then follow these steps to set up the AgarCL environment on macOS:
 
@@ -131,9 +146,9 @@ Then follow these steps to set up the AgarCL environment on macOS:
    python3 setup.py install
     ```
 
-### Done!
+#### Done!
 
-## Linux Installation Guide
+### Linux Installation Guide
 
 1. **Clone the repository:**
    ```bash
@@ -151,19 +166,21 @@ Then follow these steps to set up the AgarCL environment on macOS:
    ```bash
    source agarclenv/bin/activate
    ```
-5. **Run the installer script:**
+5. **Make the install script executable:**
    ```bash
-   ./install.sh
+   chmod +x install.sh
    ```
-6. **Install Python dependencies:**
+
+6. **Run the installer script (may require sudo):**
+   ```bash
+   sudo ./install.sh
+   ```
+7. **Install Python dependencies:**
    ```bash
    pip install -r requirements.txt
    ```
-7. **Build & install the Python package:**
+8. **Build and install the Python package:**
    ```bash
-   python3 setup.py install
-    ```
+   python setup.py install
+   ```
 ### Done!
-
-----
-Note: A graphical user interface (GUI) is required to run self-play mode or enable real-time rendering. However, a GUI is not necessary for training agents or recording and saving videos of the environment’s execution.

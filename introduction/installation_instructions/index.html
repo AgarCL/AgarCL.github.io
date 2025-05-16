@@ -6,7 +6,7 @@
 <link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="Environment Details" href="../environment_details/" /><link rel="prev" title="Basic Usage" href="../basic_usage/" />
 
     <link rel="shortcut icon" href="../../_static/agarcl_logo.png"/><!-- Generated with Sphinx 8.1.3 and Furo 2024.08.06 -->
-        <title>Installation Instructions - AgarCL Documentation</title>
+        <title>Installation instructions - AgarCL Documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=354aac6f" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?v=302659d7" />
@@ -205,7 +205,7 @@
   <p class="caption" role="heading"><span class="caption-text">Introduction</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../basic_usage/">Basic Usage</a></li>
-<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Installation Instructions</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Installation instructions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../environment_details/">Environment Details</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Development</span></p>
@@ -249,7 +249,7 @@
         </div>
         <article role="main" id="furo-main-content">
           <section id="installation-instructions">
-<h1>Installation Instructions<a class="headerlink" href="#installation-instructions" title="Link to this heading">¶</a></h1>
+<h1>Installation instructions<a class="headerlink" href="#installation-instructions" title="Link to this heading">¶</a></h1>
 <p>The recommended way to use AgarCL is within a Docker container running a Linux OS. This ensures there are no conflicts with other installed packages or platforms. This installation script will allow you to interact with AgarCL in a headless mode.</p>
 <section id="setting-up-the-container">
 <h2>Setting up the container<a class="headerlink" href="#setting-up-the-container" title="Link to this heading">¶</a></h2>
@@ -257,7 +257,7 @@
 <ol class="arabic">
 <li><p><strong>Download the Dockerfile</strong></p>
 <ul class="simple">
-<li><p>Download the <a class="reference external" href="https://github.com/AgarCL/AgarCL/blob/main/Dockerfile.txt">Dockerfile.txt</a>.</p></li>
+<li><p>Download the <a class="reference external" href="https://github.com/AgarCL/AgarCL/blob/master/Dockerfile.txt">Dockerfile.txt</a>.</p></li>
 <li><p>You can jump to step 4 for instructions to use a pre-built <a class="reference external" href="https://hub.docker.com/repository/docker/agarcl/agarclimage/general">image</a> that we share.</p></li>
 </ul>
 </li>
@@ -277,6 +277,15 @@
 </pre></div>
 </div>
 </li>
+<li><p>Skip to step 5, now that your image is built.</p></li>
+</ul>
+</li>
+<li><p><strong>Directly use the pre-built image</strong></p>
+<ul>
+<li><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>pull<span class="w"> </span>agarcl/agarclimage
+</pre></div>
+</div>
+</li>
 </ul>
 </li>
 <li><p><strong>Run the Docker Container</strong></p>
@@ -291,8 +300,8 @@
 </li>
 </ol>
 </section>
-<section id="installing-just-the-agarcl-platform">
-<h2>Installing just the AgarCL Platform<a class="headerlink" href="#installing-just-the-agarcl-platform" title="Link to this heading">¶</a></h2>
+<section id="installing-the-agarcl-platform">
+<h2>Installing the AgarCL Platform<a class="headerlink" href="#installing-the-agarcl-platform" title="Link to this heading">¶</a></h2>
 <p>Now, let’s install the platform on your system (<code class="docutils literal notranslate"><span class="pre">agarclcontainer</span></code> container):</p>
 <ol class="arabic">
 <li><p><strong>Clone the AgarCL Repository</strong></p>
@@ -322,7 +331,6 @@
 </ol>
 <section id="done">
 <h3>Done!<a class="headerlink" href="#done" title="Link to this heading">¶</a></h3>
-<p>You have successfully set up the AgarCL platform in a Docker container and installed the necessary dependencies. You can now start using the platform!</p>
 </section>
 </section>
 <section id="installing-the-agarcl-platform-and-benchmarking-tools">
@@ -331,13 +339,13 @@
 <li><p><strong>Clone the AgarCL-benchmark Repository</strong></p>
 <ul>
 <li><p>Clone the repository:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:AgarCL/AgarCL-benchmark.git
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>git@github.com/AgarCL/AgarCL-benchmark.git
 </pre></div>
 </div>
 </li>
 </ul>
 </li>
-<li><p><strong>Navigate to the AgarCL-Benchmark Directory</strong></p>
+<li><p><strong>Navigate to the AgarLE-Benchmark Directory</strong></p>
 <ul>
 <li><p>Change into the <code class="docutils literal notranslate"><span class="pre">AgarCL-benchmark</span></code> directory:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>AgarCL-benchmark
@@ -367,7 +375,7 @@
 <li><p><strong>Install the Platform</strong></p>
 <ul>
 <li><p>Run the installation command to set up the platform:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3<span class="w"> </span>setup.py<span class="w"> </span>install<span class="w"> </span>--user
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>setup.py<span class="w"> </span>install<span class="w"> </span>--user
 </pre></div>
 </div>
 </li>
@@ -378,9 +386,23 @@
 <h3>Done!<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h3>
 </section>
 </section>
+<section id="macos-and-linux-installation-guide">
+<h2>macOS and Linux Installation Guide<a class="headerlink" href="#macos-and-linux-installation-guide" title="Link to this heading">¶</a></h2>
+<section id="installation-notes">
+<h3>Installation notes:<a class="headerlink" href="#installation-notes" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Ensure the project is compiled with clang++, not g++</p></li>
+<li><p>A graphical user interface (GUI) is required to run self-play mode or enable real-time rendering. However, a GUI is not necessary for training agents or recording and saving videos of the environment’s execution.</p></li>
+</ul>
+</section>
 <section id="macos-installation-guide">
-<h2>macOS Installation Guide<a class="headerlink" href="#macos-installation-guide" title="Link to this heading">¶</a></h2>
-<p>Follow the instructions <a class="reference external" href="https://brew.sh/">here</a> and make sure you have homebrew correctly installed and updated.</p>
+<h3>macOS Installation Guide<a class="headerlink" href="#macos-installation-guide" title="Link to this heading">¶</a></h3>
+<blockquote>
+<div><p>💡 Before starting:</p>
+<p>Follow the instructions <a class="reference external" href="https://brew.sh/">here</a> and make sure you have <strong>homebrew</strong> correctly installed and updated.</p>
+<p>Make sure <strong>Command Line Tools</strong> are installed properly, follow the <a class="reference external" href="https://developer.apple.com/xcode/resources/">documentation</a>.</p>
+<p>Note: The installer will automatically install <strong>CMake 3.22</strong> (a compatible version for this project)</p>
+</div></blockquote>
 <p>Then follow these steps to set up the AgarCL environment on macOS:</p>
 <ol class="arabic">
 <li><p><strong>Clone the repository:</strong></p>
@@ -420,11 +442,11 @@
 </li>
 </ol>
 <section id="id2">
-<h3>Done!<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h3>
+<h4>Done!<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h4>
 </section>
 </section>
 <section id="linux-installation-guide">
-<h2>Linux Installation Guide<a class="headerlink" href="#linux-installation-guide" title="Link to this heading">¶</a></h2>
+<h3>Linux Installation Guide<a class="headerlink" href="#linux-installation-guide" title="Link to this heading">¶</a></h3>
 <ol class="arabic">
 <li><p><strong>Clone the repository:</strong></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>--recursive<span class="w"> </span>git@github.com:AgarCL/AgarCL.git
@@ -446,8 +468,13 @@
 </pre></div>
 </div>
 </li>
-<li><p><strong>Run the installer script:</strong></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./install.sh
+<li><p><strong>Make the install script executable:</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>chmod<span class="w"> </span>+x<span class="w"> </span>install.sh
+</pre></div>
+</div>
+</li>
+<li><p><strong>Run the installer script (may require sudo):</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>./install.sh
 </pre></div>
 </div>
 </li>
@@ -456,16 +483,15 @@
 </pre></div>
 </div>
 </li>
-<li><p><strong>Build &amp; install the Python package:</strong></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3<span class="w"> </span>setup.py<span class="w"> </span>install
+<li><p><strong>Build and install the Python package:</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>setup.py<span class="w"> </span>install
 </pre></div>
 </div>
 </li>
 </ol>
+</section>
 <section id="id3">
 <h3>Done!<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h3>
-<hr class="docutils" />
-<p>Note: A graphical user interface (GUI) is required to run self-play mode or enable real-time rendering. However, a GUI is not necessary for training agents or recording and saving videos of the environment’s execution.</p>
 </section>
 </section>
 </section>
@@ -525,9 +551,9 @@
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">Installation Instructions</a><ul>
+<li><a class="reference internal" href="#">Installation instructions</a><ul>
 <li><a class="reference internal" href="#setting-up-the-container">Setting up the container</a></li>
-<li><a class="reference internal" href="#installing-just-the-agarcl-platform">Installing just the AgarCL Platform</a><ul>
+<li><a class="reference internal" href="#installing-the-agarcl-platform">Installing the AgarCL Platform</a><ul>
 <li><a class="reference internal" href="#done">Done!</a></li>
 </ul>
 </li>
@@ -535,11 +561,13 @@
 <li><a class="reference internal" href="#id1">Done!</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#macos-and-linux-installation-guide">macOS and Linux Installation Guide</a><ul>
+<li><a class="reference internal" href="#installation-notes">Installation notes:</a></li>
 <li><a class="reference internal" href="#macos-installation-guide">macOS Installation Guide</a><ul>
 <li><a class="reference internal" href="#id2">Done!</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#linux-installation-guide">Linux Installation Guide</a><ul>
+<li><a class="reference internal" href="#linux-installation-guide">Linux Installation Guide</a></li>
 <li><a class="reference internal" href="#id3">Done!</a></li>
 </ul>
 </li>
