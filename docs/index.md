@@ -48,7 +48,7 @@ for _ in range(1000):
 env.close()
 ```
 
-The GitHub repository for the platform is available [here](https://github.com/AgarCL/AgarCL), and the repository for the agents can be found [here](https://github.com/AgarCL/AgarCL-Benchmark).
+The GitHub repository for the platform is available [here](https://github.com/machado-research/AgarCL), and the repository for the agents can be found [here](https://github.com/AgarCL/AgarCL-Benchmark).
 
 
 ```{toctree}
@@ -68,6 +68,6 @@ introduction/environment_details
 :hidden:
 :caption: Development
 
-Github: the platform <https://github.com/AgarCL/AgarCL>
+Github: the platform <https://github.com/machado-research/AgarCL>
 Github: the agents <https://github.com/AgarCL/AgarCL-Benchmark>
 ```
